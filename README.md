@@ -1,104 +1,116 @@
 # Kavisha Lakshan - Portfolio Website
 
-A modern, responsive portfolio website built with HTML, CSS, and JavaScript.
+A modern, single-page portfolio website featuring a dark glassmorphism design, smooth animations, and dynamic GitHub integration — built with vanilla HTML, CSS, and JavaScript.
 
-## 🚀 Live Demo
+## Live Demo
 
-Visit the live site: `https://[your-username].github.io/kavisha_portfolio`
+Visit the live site: [kavisha-portfolio](https://macromaster101.github.io/kavisha_portfolio)
 
-## ✨ Features
+## Features
 
-- **Responsive Design** - Works perfectly on all devices
-- **Modern UI/UX** - Clean and professional design with smooth animations
-- **Sections Include:**
-  - Hero section with introduction
-  - About me with statistics
-  - Skills showcase
-  - Featured projects
-  - Contact form
-  - Social media links
+- **Dark Glassmorphism UI** — Frosted-glass cards, gradient accents (blue/purple/pink), and subtle background grid
+- **Animated Particles & Glow Orbs** — 40 floating particles and gradient orbs for a dynamic background
+- **Typing Animation** — Cycles through roles: Full Stack Apps, AI Solutions, React Interfaces, RESTful APIs, ML Models, Scalable Systems
+- **Scroll Reveal** — Staggered fade-in animations using Intersection Observer
+- **Live GitHub Repos** — Fetches and displays public repositories from the GitHub API in real time
+- **Fully Responsive** — Three breakpoints (1024px, 768px, 480px) with mobile hamburger menu
+- **Accessible** — ARIA labels, keyboard navigation (Escape to close menu), semantic HTML
 
-## 🛠️ Technologies Used
+## Sections
 
-- HTML5
-- CSS3 (with CSS Grid & Flexbox)
-- JavaScript (Vanilla)
-- Font Awesome Icons
+| # | Section | Description |
+|---|---------|-------------|
+| — | **Navbar** | Fixed glassmorphism navbar with mobile slide-out drawer |
+| — | **Hero** | Introduction, typing effect, CTA buttons, social links, decorative code window |
+| 01 | **About** | Bio and info cards (Full Stack Dev, AI/ML, Databases, IEEE Member) |
+| 02 | **Skills** | Tech stack grouped into Languages & Frameworks, Databases, AI/ML, Tools & Platforms |
+| 03 | **Projects** | 2 featured projects, 2 noteworthy projects, and live GitHub repos |
+| 04 | **Education** | Vertical timeline — SLIIT, St. Mary's National College, IEEE membership |
+| 05 | **Contact** | Contact info cards and a contact form with client-side success animation |
+| — | **Footer** | Navigation links, project links, social icons, and copyright |
 
-## 📦 Setup & Deployment
+## Tech Stack
 
-### Local Development
+| Layer | Technology |
+|-------|------------|
+| Markup | HTML5 |
+| Styling | CSS3 (Custom Properties, Grid, Flexbox, Animations) |
+| Behavior | Vanilla JavaScript (ES6+) |
+| Icons | [Font Awesome 6.5.1](https://fontawesome.com/) (CDN) |
+| Fonts | [Inter](https://fonts.google.com/specimen/Inter) & [JetBrains Mono](https://fonts.google.com/specimen/JetBrains+Mono) (Google Fonts) |
 
-1. Clone this repository:
+## Project Structure
+
+```
+kavisha_portfolio/
+  index.html    — Single-page HTML with all sections (599 lines)
+  style.css     — Complete styling with CSS custom properties (1562 lines)
+  script.js     — All JavaScript functionality (287 lines)
+  README.md     — Project documentation
+```
+
+## Getting Started
+
+1. **Clone the repository:**
    ```bash
-   git clone https://github.com/[your-username]/kavisha_portfolio.git
+   git clone https://github.com/MacroMaster101/kavisha_portfolio.git
    cd kavisha_portfolio
    ```
 
-2. Open `index.html` in your browser or use a local server:
+2. **Run a local server:**
    ```bash
    # Using Python
    python -m http.server 8000
-   
+
    # Using Node.js
    npx serve
    ```
 
-3. Visit `http://localhost:8000` in your browser
+3. **Open** `http://localhost:8000` in your browser.
 
-### Deploy to GitHub Pages
+## Deploy to GitHub Pages
 
-1. Go to your repository on GitHub
-2. Click on **Settings**
-3. Navigate to **Pages** in the left sidebar
-4. Under **Source**, select **main** branch
-5. Click **Save**
-6. Your site will be published at `https://[your-username].github.io/kavisha_portfolio`
+1. Go to your repository **Settings**
+2. Navigate to **Pages** in the sidebar
+3. Under **Source**, select the **main** branch
+4. Your site will be published at `https://<username>.github.io/kavisha_portfolio`
 
-## 🎨 Customization
+## Customization
 
-### Update Personal Information
+### Colors
 
-1. **index.html** - Update your name, bio, and contact information
-2. **Social Links** - Replace placeholder links with your actual profiles:
-   - GitHub: `https://github.com/your-username`
-   - LinkedIn: `https://linkedin.com/in/your-profile`
-   - Twitter: `https://twitter.com/your-handle`
+Edit the CSS custom properties in `style.css`:
 
-### Add Your Projects
-
-In the projects section of `index.html`, replace the placeholder content:
-- Update project titles and descriptions
-- Add real project images (replace `https://via.placeholder.com/400x250`)
-- Add GitHub repository links
-- Add live demo links
-
-### Modify Colors
-
-Edit the CSS variables in `style.css`:
 ```css
 :root {
-    --primary-color: #6366f1;
-    --secondary-color: #8b5cf6;
-    --dark-bg: #0f172a;
-    /* ... customize other colors */
+    --bg: #050505;
+    --card-bg: rgba(255, 255, 255, 0.03);
+    --accent: #00c6ff;
+    --accent-purple: #7c3aed;
+    --accent-pink: #c026d3;
+    --gradient: linear-gradient(135deg, #00c6ff, #7c3aed, #c026d3);
 }
 ```
 
-## 📝 License
+### Personal Info
 
-This project is open source and available under the MIT License.
+- Update name, bio, and contact details in `index.html`
+- Replace project entries with your own work
+- Update social links (GitHub, LinkedIn, Facebook, Email)
 
-## 🤝 Contributing
+## Featured Projects
 
-Feel free to fork this project and customize it for your own use!
+- **TravelGenie** — AI-driven travel planning platform (Node.js, Express, React, Vite, PostgreSQL)
+- **Secure E-Voting System** — Web-based voting system (Java, Spring Boot, React, MS SQL Server)
+- **DengueRisk** — AI dengue risk prediction model (Python, Pandas, NumPy, Scikit-learn)
+- **Home Tutor Management System** — Tutor management platform (Java, CSS, JavaScript)
 
-## 📧 Contact
+## Contact
 
-- Email: kavisha@example.com
-- GitHub: [@kavisha-lakshan](https://github.com/kavisha-lakshan)
-- LinkedIn: [Kavisha Lakshan](https://linkedin.com/in/kavisha-lakshan)
+- Email: lakshan.kavishatt@gmail.com
+- GitHub: [@MacroMaster101](https://github.com/MacroMaster101)
+- LinkedIn: [Kavisha Liyanage](https://linkedin.com/in/kavisha-liyanage04)
 
 ---
 
-Made with ❤️ by Kavisha Lakshan
+Made with passion by **Kavisha Liyanage**
