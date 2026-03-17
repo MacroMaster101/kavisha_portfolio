@@ -185,25 +185,47 @@ document.addEventListener('DOMContentLoaded', () => {
     // ═══════════════════════════
     // Contact Form
     // ═══════════════════════════
+    const FORMSPREE_ID = 'mkoqpwar'; 
+
     const form = document.getElementById('contactForm');
     if (form) {
-        form.addEventListener('submit', (e) => {
+        form.addEventListener('submit', async (e) => {
             e.preventDefault();
 
             const btn = form.querySelector('button[type="submit"]');
             const origHTML = btn.innerHTML;
 
-            // Success state
-            btn.innerHTML = '<i class="fas fa-check-circle"></i> Message Sent!';
-            btn.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
             btn.disabled = true;
 
-            setTimeout(() => {
-                btn.innerHTML = origHTML;
-                btn.style.background = '';
-                btn.disabled = false;
-                form.reset();
-            }, 3500);
+            try {
+                const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+                    method: 'POST',
+                    headers: { 'Accept': 'application/json' },
+                    body: new FormData(form)
+                });
+
+                if (res.ok) {
+                    btn.innerHTML = '<i class="fas fa-check-circle"></i> Message Sent!';
+                    btn.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
+                    form.reset();
+                    setTimeout(() => {
+                        btn.innerHTML = origHTML;
+                        btn.style.background = '';
+                        btn.disabled = false;
+                    }, 3500);
+                } else {
+                    throw new Error('Failed');
+                }
+            } catch {
+                btn.innerHTML = '<i class="fas fa-times-circle"></i> Failed to send';
+                btn.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
+                setTimeout(() => {
+                    btn.innerHTML = origHTML;
+                    btn.style.background = '';
+                    btn.disabled = false;
+                }, 3500);
+            }
         });
     }
 

@@ -84,11 +84,12 @@ Edit the CSS custom properties in `style.css`:
 ```css
 :root {
     --bg: #050505;
-    --card-bg: rgba(255, 255, 255, 0.03);
-    --accent: #00c6ff;
-    --accent-purple: #7c3aed;
-    --accent-pink: #c026d3;
-    --gradient: linear-gradient(135deg, #00c6ff, #7c3aed, #c026d3);
+    --surface: rgba(255, 255, 255, 0.025);
+    --glass: rgba(255, 255, 255, 0.04);
+    --blue: #00c6ff;
+    --purple: #7c3aed;
+    --pink: #c026d3;
+    --gradient: linear-gradient(135deg, #00c6ff 0%, #7c3aed 50%, #c026d3 100%);
 }
 ```
 
